@@ -1,14 +1,7 @@
-def my_function():
-    a=5
-    b=6
-    c=6
- 
-    return d
+def hello():
+     """
+     this is demo
+     """
+     return "Hello Dosto"
 
-
-my_function()
-
-
-
-
-test()
+hello()
