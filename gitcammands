@@ -1,0 +1,121 @@
+git init # Initialize a new Git repository
+git config user.name "<name>" # Set your Git username
+git config user.email "<email>" # Set your Git email
+git status # Check the status of your repo
+git add <file> # Add a file to the staging area
+git add . # Add all files to the staging area
+git commit -m "<message>" # Commit changes with a message
+git log # View commit history
+git log --oneline # View commit history in compact format
+git diff # Show changes between working directory and the last commit
+git diff <branch1> <branch2> # Show changes between two branches
+git show <commit> # Show changes made in a specific commit
+git ls-files # List all files tracked by Git
+git blame <file> # Show who changed what in a file
+git bisect # Find the commit that introduced a bug
+git reflog # Show a log of all local commits
+git cat-file -p <commit> # Display the content of a commit object
+git rev-parse <ref> # Get the SHA-1 hash of a reference
+git fsck # Verify the integrity of the repository
+git gc # Clean up unnecessary files and optimize the repository
+
+
+Remote Repositories
+git remote add origin <url> # Connect local repo to remote
+git push -u origin <branch> # Push changes to remote branch
+git pull # Pull changes from remote repo
+git clone <url> # Clone a remote repository
+git remote -v # List remote connections
+git remote rm <remote> # Remove a remote connection
+git fetch # Fetch updates from remote repo without merging
+git remote show <remote> # Show details about a remote repository
+git remote rename <old-name> <new-name> # Rename a remote repository
+git push --tags # Push all tags to remote repository
+git push --force # Force-push changes to the remote repository
+git push origin --delete <branch> # Delete a remote branch
+git pull --rebase # Pull and rebase the current branch
+git fetch --all # Fetch updates from all remote repositories
+git remote update # Update remote-tracking branches
+
+
+Branching & Merging
+git branch # List all branches
+git branch <branch> # Create a new branch
+git checkout <branch> # Switch to a branch
+git checkout -b <branch> # Create and switch to a new branch
+git merge <branch> # Merge a branch into the current branch
+git branch -d <branch> # Delete a branch
+git branch -r # List remote branches
+git branch -a # List local and remote branches
+git branch -u <upstream-branch> # Set upstream branch for the current branch
+git branch -m <old-name> <new-name> # Rename a branch
+git branch --merged # List branches that have been merged into the current branch
+git branch --no-merged # List branches that have not been merged into the current branch
+git merge --abort # Abort an ongoing merge operation
+git merge --squash <branch> # Squash the commits from a branch into a single commit
+git merge --no-ff <branch> # Merge with a merge commit even if it's a fast-forward merge
+
+
+Stashing
+git stash # Save changes for later
+git stash list # List stashed changes
+git stash apply # Apply stashed changes
+git stash drop # Remove a stash
+git stash pop # Apply and remove the latest stash
+git stash branch <branch> # Create a new branch and apply a stash
+git stash save "<message>" # Save changes with a custom stash message
+git stash clear # Remove all stashed changes
+git stash apply <stash> # Apply a specific stash
+git stash drop <stash> # Remove a specific stash
+
+
+Rebase & Cherry-picking
+git fetch # Fetch updates from remote repo
+git rebase <branch> # Rebase current branch onto another
+git cherry-pick <commit> # Apply a specific commit
+git rebase --abort # Abort an ongoing rebase operation
+git rebase --continue # Continue a paused rebase operation
+git rebase --skip # Skip a conflicting commit during rebase
+git cherry-pick --continue # Continue a paused cherry-pick operation
+git cherry-pick --abort # Abort an ongoing cherry-pick operation
+
+
+Reset, Remove, and Rename
+git reset # Reset staging area to match the last commit
+git reset <file> # Remove a file from the staging area
+git reset --hard # Discard all changes since the last commit
+git rm <file> # Remove a file from the repository and working directory
+git mv <old-name> <new-name> # Rename or move a file
+git clean -f # Remove untracked files from the working directory
+git clean -fd # Remove untracked files and directories from the working directory
+
+
+Tags
+git tag # List tags
+git tag <tag-name> # Create a lightweight tag
+git tag -a <tag-name> -m "<message>" # Create an annotated tag
+git push origin <tag-name> # Push a tag to the remote repository
+git tag -d <tag-name> # Delete a local tag
+git push origin --delete <tag-name> # Delete a remote tag
+git tag --contains <commit> # Find tags containing a specific commit
+git describe # Describe the most recent tag and commit
+
+
+Advanced Commands
+git submodule add <repository> <path> # Add a Git submodule
+git submodule init # Initialize Git submodules
+git submodule update # Update Git submodules
+git submodule foreach <command> # Execute a command in all submodules
+git grep <pattern> # Search for a pattern in the repository
+git log -S"<pattern>" # Search for commits that added or removed a pattern
+git archive --format=zip --output=<output-file> <branch> # Create a zip archive of a branch
+git shortlog # Summarize commit logs by author
+git log --graph --decorate --oneline # Display commit history as a graph
+git rev-list --count <ref> # Count the number of commits in a branch
+git commit --amend # Modify the last commit
+git commit --amend -m "<new-message>" # Modify the last commit message
+git reflog expire --expire=now --all # Remove all reflog entries
+git rev-parse --show-toplevel # Show the root directory of the repository
+git config --global alias.<alias-name> '<git-command>' # Create a Git alias
+git config --list # List all Git configuration settings
+git help <command> # Show help for a Git command
